@@ -1,0 +1,74 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 2rem;
+  grid-template-rows: auto  1fr 1fr 1fr 1fr;
+  height: 100vh;
+  grid-template-areas: 
+  "h h h h h h h h h h h h "
+  "s s s  m m m m m m m m m"
+  "s s s  m m m m m m m m m"
+  "s s s b1 b1 b1 b2 b2 b2 b3 b3 b3"
+  "s s s f f f f f f f f f";
+}
+
+.head{
+  grid-area: h;
+  border: 2px solid green;
+}
+
+.side{
+    grid-area: s;
+    border: 2px solid red;
+}
+
+.main{
+    grid-area: m;
+    border: 2px solid red;
+}
+
+.box-1{
+    grid-area: b1;
+    border: 2px solid red;
+}
+
+.box-2{
+    grid-area: b2;
+    border: 2px solid red;
+}
+
+.box-3{
+    grid-area: b3;
+    border: 2px solid red;
+}
+
+.foot{
+    grid-area: f;
+    border: 2px solid red;
+}
+
+
+@media screen and (max-width:700px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 2rem;
+        grid-template-rows: repeat(14,auto);
+        height: 100vh;
+        grid-template-areas: 
+        "h h h h h h h h h h h h "
+        "s s s  s s s s s s s s s"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+        "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+        "b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2"
+        "b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2"
+        "b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3"
+        "b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3"
+        "f f f f f f f f f f f f"
+        "f f f f f f f f f f f f"
+      }
+}

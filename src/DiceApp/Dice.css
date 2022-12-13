@@ -1,0 +1,31 @@
+.diceMain h1{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.NumbersMain{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 60%;
+    margin-left: 17%;
+    gap: 2rem;
+    
+}
+
+.numberSingle{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: 2px solid black;
+}
+
+.active{
+    background-color: gray;
+}

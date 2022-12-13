@@ -1,0 +1,152 @@
+.grid{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  "b2 b2 b2 b2 b2 b2  b3 b3 b3  s s s"
+  "b2 b2 b2 b2 b2 b2 b4 b4 b4  s s s"
+  "b6 b6 b6 b6 b6 b6 b6 b6 b6 s s s"
+  "b7 b7 b7 b8 b8 b8 b8 b8 b8 s s s"
+  "f f f f f f f f f f f f"
+  ;
+  height: 100vh;
+}
+
+
+.head{
+    grid-area: h;
+    border: 2px solid red;
+}
+
+.b2{
+    grid-area: b2;
+    border: 2px solid red;
+    
+}
+
+.b3{
+    grid-area: b3;
+    border: 2px solid red;
+}
+
+.b4{
+    grid-area: b4;
+    border: 2px solid red;
+}
+
+.side{
+    grid-area: s;
+    border: 2px solid red;
+}
+
+.b6{
+    grid-area: b6;
+    border: 2px solid red;
+}
+
+
+.b7{
+    grid-area: b7;
+    border: 2px solid red;
+}
+
+.b8{
+    grid-area: b8;
+    border: 2px solid red;
+}
+
+.foot{
+    grid-area: f;
+    border: 2px solid red;
+}
+
+@media screen and (max-width:810px){
+    .grid{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr auto;
+        grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "b2 b2 b2 b2 b2 b2  b2 b2 b2  s s s"
+        "b2 b2 b2 b2 b2 b2 b2 b2 b2  s s s"
+        "b3 b3 b3 b3 b4 b4 b4 b4 b4  s s s"
+        "b6 b6 b6 b6 b6 b6 b6 b6 b6 s s s"
+        "b7 b7 b7 b8 b8 b8 b8 b8 b8 s s s"
+        "f f f f f f f f f f f f"
+        ;
+        height: 100vh;
+      }
+}
+
+
+@media screen and (max-width:600px){
+    .grid{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr auto;
+        grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "s s s s s s s s s s s s"
+        "b2 b2 b2 b2 b2 b2 b2 b2 b2 b3 b3 b3"
+        "b2 b2 b2 b2 b2 b2 b2 b2 b4 b4 b4 b4"
+        "b6 b6 b6 b6 b6 b6 b6 b6 b6 b6 b6 b6"
+        "b7 b7 b7 b7 b7 b7 b8 b8 b8 b8 b8 b8"
+        "f f f f f f f f f f f f" 
+        ;
+        height: 100vh;
+      }
+}
+
+/* The PART2 Strats*/
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "b1 b1 b2 b3"
+  "b1 b1 b4 b5";
+  grid-template-rows: 150px 150px;
+  gap: 1.3rem;
+  padding: 30px;
+}
+
+.box-1{
+    grid-area: b1;
+    border: 2px solid red;
+}
+.box-2{
+    grid-area: b2;
+    border: 2px solid red;
+}
+.box-3{
+    grid-area: b3;
+    border: 2px solid red;
+}
+.box-4{
+    grid-area: b4;
+    border: 2px solid red;
+}
+.box-5{
+    grid-area: b5;
+    border: 2px solid red;
+}
+
+
+@media screen and (max-width:700px) {
+    .grid-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "b1 b1 b1 b1"
+        "b1 b1 b1 b1"
+        "b2 b2 b3 b3"
+        "b4 b4 b5 b5";
+        grid-template-rows: 100px 100px 100px 100px;
+        gap: 1.3rem;
+        padding: 30px;
+    }
+}

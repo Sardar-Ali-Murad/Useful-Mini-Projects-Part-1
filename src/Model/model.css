@@ -1,0 +1,61 @@
+.btns{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 24%;
+}
+
+.red{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(60, 9, 18);
+    border: 2px solid rgb(130, 9, 18);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.blue{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(14, 25, 117);
+    border: 2px solid rgb(31, 47, 136);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.model{
+    width: 40%;
+    z-index: 12;
+    position: relative;
+}
+
+.Overlays{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+
+@media screen and (max-width:700px) {
+    .model{
+        width: 70%;
+    }
+}

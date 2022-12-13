@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* In the sticky the sticky elemnt remains in the parent only and cannot escape its parent in any case white fixed do escape */
+/* Remain sticky to the viewport on the screen top at its starting positions*/
+
+/* In the below senario we can see that the parent of the nav is body so it will remain sticky at the top of the parent but starting from its initial position and in second case as the the parent goes away the the text dissapears as it remains as the text is sticky means the content at the top and remain in the body only on the parent*/
+
+.img{
+  /* background-color: red; */
+  /* border: 2px solid red; */
+}
+
+body{
+    border: 2px solid red;
+}
+
+.img img{
+    width: 100%;
+     height: 50vh;
+     object-fit: cover;
+}
+
+.main-container nav {
+    /* margin-top: 50px; */
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    height: 100px;
+    color: red;
+    background-color: pink;
+    margin-top: 30px;
+    border: 2px solid hotpink;
+}
+
+.main-container nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container nav ul li a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.main-container{
+    /* background-color: yellow; */
+    height: 700vh;
+}
+
+/* The sticky in the parent not escaping */
+
+.parent-sticky{
+    background-color: orange;
+    height: 500px;
+    border: 2px solid blue;
+    z-index: -11;
+    margin-top: 60px;
+}
+
+.child-sticky{
+    position: sticky;
+    top: 0px;
+}
+
+.bottom-sticky{
+    position: sticky;
+    bottom: 0;
+}
+
+.sticky-magic-parent{
+    background-color: white;
+    margin-top: 40px;
+    text-align: center;
+    height: 343px;
+    padding: 10px 253px;
+}
+
+.sticky-magic-parent button{
+    padding: 10px;
+width: 92px;
+margin-top: 30px;
+color: wheat;
+background: red;
+position: sticky;
+bottom: 0;
+z-index: 1;
+}
+
+

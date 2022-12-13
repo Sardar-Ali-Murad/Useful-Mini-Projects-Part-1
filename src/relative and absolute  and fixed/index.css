@@ -1,0 +1,122 @@
+.main{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+
+/* We can see the by the position absolute the itms are not supposed to hold the place */
+
+.child1{
+    position: absolute;
+}
+.child2{
+    position: absolute;
+}
+
+.child3{
+    position: absolute;
+    z-index: 10;
+    color: white;
+}
+
+
+/* This si the second box */
+/* So we can say say that they are used just for the position purpose only they do no hold the place if they are placed in sequenec */
+/* we  */
+
+.main2{
+    position: relative;
+    margin-top: 30px;
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    display: flex;
+}
+
+.main21{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+/* we can placed the items on the one above the other as below */
+
+.main3{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.main31{
+    position: absolute;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+}
+.main32{
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+.main33{
+    position: absolute;
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* The Fixed Starts */
+/* I can see that the fixed is adjustind with the parent in the below case top bottom left and the right all are woeking */
+
+.fixed1{
+    position: fixed;
+    /* margin-bottom: 50px; */
+    background-color: red;
+    height: 100px;
+    width:100%;
+    bottom: 0;
+    right: 0;
+}
+
+/* Below we see that the fixed escapes the parent behaving the opposite the sticky */
+
+
+.fixed2{
+    height: 120px;
+    width: 120px;
+    margin-top: 50px;
+    background-color: yellow;
+}
+
+.fixed2 p{
+    position: fixed;
+    bottom: 0;
+    /* b: 0; */
+}
+
+.fixed3{
+    display: flex;
+}
+
+.fixed31{
+    background-color: lightcoral;
+    position: fixed;
+    height: 100px;
+    width: 200px;
+    top: 0;
+}
+.fixed32{
+    height: 120px;
+    width: 120px;
+    margin-top: 50px;
+    background-color: gray;
+}
+
+
+/* So the grids are position with the body only not taking the space in sequence and is not giving importance to the parent */

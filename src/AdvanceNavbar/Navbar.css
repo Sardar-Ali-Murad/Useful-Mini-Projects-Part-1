@@ -1,0 +1,155 @@
+.NavBigScreen{
+    background-color: rgb(12, 14, 23);
+    height: 80px;
+     margin-top: 30px;
+     width: 80%;
+     margin-left: 5%;
+     border-radius: 10px;
+     justify-content: space-around;
+     align-items: center;
+     display: flex;
+     position: sticky;
+     top: 0;
+     left: 0;
+}
+
+.realMain{
+   background-color: rgb(156, 30, 31);
+   padding: 20px;
+   position: relative;
+}
+.bigLinks{
+    width: 80%;
+}
+
+.bigLinks nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bigLinks nav ul li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 50px;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.bigLinks nav ul li:hover{
+    height: 50px;
+    padding: 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: rgb(9, 13, 138);
+}
+
+
+.bigLinks nav ul li a{
+    color: white;
+    margin-left: 14px;
+}
+
+
+.box{
+    width: 30%;
+    margin: auto;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    display: none;
+    backdrop-filter: blur(25px);
+    margin-left: 7%;
+    position: fixed;
+    margin-bottom: 10%;
+    top: 80px;
+    animation: bar 1s linear;
+}
+
+@keyframes bar {
+    from {transform: translateX(-200px)}
+      to {transform: translateX(0px)}
+    }
+
+.Overlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+}
+
+.part1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.smallLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallLinks {
+    height: 400px;
+}
+
+.smallLinks nav ul li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 10px;
+   
+}
+
+.smallLinks nav ul li:hover{
+    height: 50px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: rgb(255,255,255,.7);
+    margin-top: 30px;
+}
+
+.smallLinks nav ul li a{
+    margin-left: 20px;
+}
+
+
+
+/* Box Representing the small Screen navbar */
+
+@media screen and (max-width:870px){
+    .bigLinks{
+        display: none;
+    }
+    .box{
+        display: block;
+    }
+    .Overlay{
+        display: block;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .box{
+        width: 70%;
+    }
+}
+

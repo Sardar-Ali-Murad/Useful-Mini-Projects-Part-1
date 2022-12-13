@@ -1,0 +1,125 @@
+.grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m m m m m m m m m m m m"
+    "f f f f f f f f f f f f";
+    /* grid-template-rows: 40px auto 40px; */
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.header{
+  grid-area: h;
+  border: 2px solid red;
+}
+
+.main{
+    grid-area: m;
+    border: 2px solid green;
+}
+
+.footer{
+    grid-area: f;
+    border: 2px solid blue;
+}
+
+/* 2nd PART */
+.grid2{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    ". b1 b1 b1 b1 b1 b1 b1 b2 b2 b2 .";
+    /* grid-template-rows: 200px; */
+    height: 100vh;
+    place-content: center;
+}
+
+
+.box1{
+    grid-area: b1;
+    border: 2px solid red;
+}
+
+.box2{
+    grid-area: b2;
+    border: 2px solid green;
+}
+
+
+/* The Parts 3 */
+
+.grid-3{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto auto 1fr auto;
+    height: 100vh;
+    grid-template-areas:
+    "h h  h h h h  h h h h h h" 
+    "s s n n n n n n n n a a"
+    "s s m m m m m m m m  a a"
+    "f f f f f f f f f f f f"
+    ;
+}
+
+
+
+.header-grid-3{
+    grid-area: h;
+    border: 2px solid red;
+}
+.nav{
+    grid-area: n;
+    border: 2px solid red;
+}
+
+.main-grid-3{
+    grid-area: m;
+    border: 2px solid red;
+}
+.ads{
+    grid-area: a;
+    border: 2px solid red;
+}
+.foot{
+    grid-area: f;
+    border: 2px solid red;
+}
+
+.side{
+    grid-area: s;
+    border: 2px solid red;
+}
+
+@media screen and (max-width:800px) {
+    .grid-3{
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+        " h h h h h h h  h h h h h" 
+        "n  n n n n n n n n n n n "
+        "s s s  m m m  m  m m m m m "
+        "a a a f f f f f f f f f"
+        ;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .grid-3{
+        grid-template-rows: auto auto auto 1fr auto auto;
+        grid-template-areas:
+        " h h h h h h h  h h h h h" 
+        "n  n n n n n n n n n n n "
+        "m m m  m m m  m  m m m m m "
+        "s s s s s s s s s s s s "
+        "a a a a a a a a a a a a"
+        "f f f f f f f f f f f f"
+        ;
+    }
+}
+

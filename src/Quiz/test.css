@@ -1,0 +1,74 @@
+.testMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.testMain .card{
+    width: 42%;
+    min-height: 40%;
+    padding: 30px;
+}
+
+.testMain .card h1{
+  margin-bottom: 20px;
+}
+
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.options p{
+    width: 43%;
+    background-color: lightgray;
+    margin: 0px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.options .activeOption{
+    background-color: brown;
+    color: white;
+
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    background-color: aqua;
+    border: 2px solid aqua;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    color: black;
+}
+
+.buttons button:hover{
+    background-color: lightblue;
+    border: 2px solid lightblue;
+    
+}
+
+
+@media screen and (max-width:800px) {
+    .testMain .card{
+        width: 90%;
+    }
+}

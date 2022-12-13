@@ -1,0 +1,142 @@
+.SedoImage{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.SedoImage::before{
+    content: "";
+    background: url("./4.jpg") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.SedoImage h1{
+    color: black;
+
+}
+
+/* Remember the display:block or the inline in this case is important */
+
+
+/* Quotes */
+
+.quotes p::before{
+   content: open-quote;
+   /* background-color: red; */
+}
+
+.quotes p::after{
+   content: close-quote;
+}
+
+
+.label::after{
+    content: "*";
+    /* display: block/; */
+}
+
+
+
+.Lines h3::before{
+    content: "xxxxx_________________";
+}
+
+.Lines h3::after{
+    content: "__________xxxxxx";
+}
+
+
+.ImageLines h2::before{
+    content: "XXXXXX________XXXXXXX";
+    display: block;
+}
+
+.LinkContainer{
+    counter-reset: counter-name;
+}
+
+.LinkContainer li{
+    counter-increment: counter-name;
+    position: relative;
+    margin-left: 40px;
+}
+
+.LinkContainer li::before{
+    content: counter(counter-name) "No" " ) " ;
+    position: absolute;
+    left: -40px;
+    color: red;
+}
+
+.bigList{
+    counter-reset: counter-name-any;
+    margin-left: 100px;
+}
+
+.bigList h1{
+    color: brown;
+    margin: 0;
+}
+
+.bigList p{
+    color: lightgray;
+    margin: 0;
+}
+
+.bigList div{
+    margin-bottom: 40px;
+}
+
+
+.bigList h1{
+    counter-increment: counter-name;
+    position: relative;
+}
+
+.bigList h1::before{
+    content: counter(counter-name) ;
+    position: absolute;
+    left: -70px;
+    width: 60px;
+    height: 60px;
+    font-size: 17px;
+    background-color: white;
+    border-radius: 2px solid rgba(255,255,255,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+/* For the tooltip */
+a[data-tooltip]{
+  position: relative;
+  color: blue;
+  text-decoration: underline;
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+a[data-tooltip]:hover:before{
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -37px;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 6px;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, .7); 
+  border-radius: 2px;
+  width: 100%;
+  text-align: center;
+}

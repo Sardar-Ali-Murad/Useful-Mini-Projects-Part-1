@@ -1,0 +1,47 @@
+
+.memoryMain{
+    gap:2rem;
+     margin-top: 20px; 
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit,minmax(10rem,1fr)); */
+    grid-template-columns: auto auto auto auto;
+    height: 80vh;
+    padding: 40px;
+}
+
+
+.single{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.single h1{
+    display: none;
+}
+
+.activeCard{
+    transform: rotateY(360deg);
+    transition: 2s linear;
+    background-color: lightblue;
+}
+
+.activeCard h1{
+    color: red;
+    font-size: 50px;
+}
+
+.activeCard h1{
+    display: block;
+}
+
+
+
+@media screen and (max-width:730px){
+    .memoryMain{
+        grid-template-columns: auto auto ;
+    }
+}

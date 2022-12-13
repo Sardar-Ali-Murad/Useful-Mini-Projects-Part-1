@@ -1,0 +1,10 @@
+
+
+/* Centering the box */
+.boxes{
+    width: 200px;
+    background-color: red;
+    margin-left: 50%;
+    height: 200px;
+    transform: translate(-50%);
+}

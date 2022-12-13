@@ -1,0 +1,110 @@
+.navMain{
+    background-color: rgb(26, 51, 0);
+    height: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.BigScreen{   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.BigScreen nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Links{
+    /* background-color: red; */
+    width: 40%;
+}
+
+
+.BigScreen nav{
+    width: 100%;
+}
+
+.BigScreen nav ul li a{
+    color: white;
+    cursor: pointer;
+    font-family:  'Roboto Condensed', Sans-Serif;
+    font-size: 1.237rem;
+}
+
+.BigScreen nav ul li a:hover{
+    color: 	rgb(179, 134, 0);
+    transform: scale(20px);
+}
+
+.ham{
+    display: none;
+}
+
+
+.BigNav{
+     background-color: rgb(26, 51, 0);
+     height: 100vh;
+     width: 200px;
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     display: none;
+     animation-name: bar;
+     animation-timing-function: linear;
+     animation-duration: 1s;
+     animation-iteration-count: 1;
+}
+
+
+
+.SmallLinks{
+    height: 50%;
+    padding: 20px;
+}
+
+.SmallLinks nav ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.SmallLinks nav{
+    height: 100%;
+}
+
+.SmallLinks nav ul li a{
+    color: white;
+    cursor: pointer;
+    font-family:  'Roboto Condensed', Sans-Serif;
+    font-size: 1.237rem;
+}
+
+.SmallLinks nav ul li a:hover{
+    color: 	rgb(179, 134, 0);;
+}
+
+
+@keyframes bar {
+    from {transform: translateX(-200px)}
+      to {transform: translateX(0px)}
+    }
+
+@media screen and (max-width:870px) {
+    .Links{
+        display: none;
+    }
+    
+    .ham{
+        display: block;
+    }
+    .BigNav{
+        display: block;
+    }
+}
